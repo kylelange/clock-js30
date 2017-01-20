@@ -1,6 +1,6 @@
-# _Title_
+# _Clock_
 
-#### _{Description Here}, {DATE}_
+#### _{A working clockface with proper hand animation.  Will tell the local time of the user.}, {DATE}_
 
 #### By _**Kyle Lange**_
 
