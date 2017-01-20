@@ -96,15 +96,31 @@
       const NOW = new Date();
       const SECONDS = NOW.getSeconds();
       const SECONDS_DEG = ((SECONDS / 60) * 360) + 90;
-      SECOND_HAND.style.transform = `rotate(${SECONDS_DEG}deg)`;
+      //add conditional statement HERE on 0deg to fix clock reset judder?  Turn off transition: all 0.05s;
+      if (SECONDS === 445) {
+        SECOND_HAND.style.transition = "";
+        MIN_HAND.style.transition = "";
+        HOUR_HAND.style.transition = "";
+        SECOND_HAND.style.transform = `rotate(${SECONDS_DEG}deg)`;
+      } else {
+        SECOND_HAND.style.transform = `rotate(${SECONDS_DEG}deg)`;
+      }
       const MIN = NOW.getMinutes();
       const MIN_DEG = ((MIN / 60) * 360) + 90;
-      MIN_HAND.style.transform = `rotate(${MIN_DEG}deg)`;
+      if (MIN === 445) {
+        MIN_HAND.style.transition = "";
+        MIN_HAND.style.transform = `rotate(${MIN_DEG}deg)`;
+      } else {
+        MIN_HAND.style.transform = `rotate(${MIN_DEG}deg)`;
+      }
       const HOUR = NOW.getHours();
       const HOUR_DEG = ((HOUR / 12) * 360) + 90;
-      HOUR_HAND.style.transform = `rotate(${HOUR_DEG}deg)`;
-      //console.log(SECONDS);
-      console.log(MIN);
+      if (HOUR === 445) {
+        HOUR_HAND.style.transition = "";
+        HOUR_HAND.style.transform = `rotate(${HOUR_DEG}deg)`;
+      } else {
+        HOUR_HAND.style.transform = `rotate(${HOUR_DEG}deg)`;
+      }
     }
 
     setInterval(setDate, 1000);
