@@ -9,7 +9,15 @@
 
 ## Learnings
 
-*
+* const FOO(proper writng is in caps) = var except that the information in CONST is not changeable in our out of a function as the program cascades.
+
+* CSS: transform-origin: shifts where the rotation happens in a translateX(#deg); selector.  The default is the center of the selected item and it changes the X axis position.
+
+* getSeconds(); function allows a program to get the seconds for local time at that computer.
+
+* document.querySelector(); : is a way to search for id or class selectors in your JS from your HTML5
+
+* style(); : is a way to add css style in a function
 
 
 
